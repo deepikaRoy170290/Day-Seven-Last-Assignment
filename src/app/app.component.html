@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+  <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="/">Accounts</a>
+      <a class="nav-item nav-link" routerLink="/fundTransfer">FundTrasfer</a>
+      <a class="nav-item nav-link" routerLink="/billPay&Recharge">BillPay&Recharge</a>
+      <a class="nav-item nav-link" routerLink="/offers">Offers</a>
+      <a class="nav-item nav-link" (click)="logout()">Logout</a>
+  </div>
+</nav>
+
+<!-- main app container -->
+
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-12">
+            <app-alert></app-alert>
+              <router-outlet></router-outlet>
+          </div>
+      </div>
+  </div>
+

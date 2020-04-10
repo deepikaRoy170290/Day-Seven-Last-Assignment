@@ -1,0 +1,29 @@
+<h1>Hi {{currentUser.firstName}}!</h1>
+<h3>Accounts Page</h3>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Narration</th>
+        <th scope="col">cheque/Ref. No.</th>
+        <th scope="col">Value Date</th>
+        <th scope="col">Withdrawal</th>
+        <th scope="col">Deposite</th>
+        <th scope="col">Closing Balance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let acc of account">
+        <th scope="row">{{acc.date}}</th>
+        <td>{{acc.narration}}</td>
+        <td>{{acc.checkNo}}</td>
+        <td>{{acc.valueDate}}</td>
+        <td>{{acc.withdrawal}}</td>
+        <td>{{acc.deposit}}</td>
+        <td>{{acc.closingBal}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
